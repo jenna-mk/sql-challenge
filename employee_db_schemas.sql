@@ -1,0 +1,39 @@
+-- Data Engineering 
+
+-- Drop tables if they exist
+DROP TABLE IF EXISTS departments;
+DROP TABLE IF EXISTS dept_emp;
+DROP TABLE IF EXISTS dept_manager;
+DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS salaries;
+DROP TABLE IF EXISTS titles;
+
+-- Create the needed tables 
+CREATE TABLE departments (
+	dept_no VARCHAR,
+	dept_name VARCHAR
+);
+
+CREATE TABLE dept_emp(
+	emp_no INT,
+	dept_no VARCHAR
+);
+
+CREATE TABLE dept_manager(
+	dept_no VARCHAR,
+	emp_no INT
+);
+
+CREATE TABLE employees(
+	emp_no INT,
+	emp_title VARCHAR,
+	birth_date DATE,
+	first_name VARCHAR,
+	last_name VARCHAR,
+	sex VARCHAR,
+	hire_date DATE
+);
+
+CREATE TABLE salaries();
+
+CREATE TABLE titles();
