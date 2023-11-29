@@ -10,13 +10,13 @@ DROP TABLE IF EXISTS titles CASCADE;
 
 -- Departments table 
 CREATE TABLE departments (
-	dept_no VARCHAR PRIMARY KEY,
+	dept_no VARCHAR PRIMARY KEY NOT NULL,
 	dept_name VARCHAR
 );
 
 -- Create employees table
 CREATE TABLE employees(
-	emp_no INT PRIMARY KEY,
+	emp_no INT PRIMARY KEY NOT NULL,
 	emp_title VARCHAR,
 	birth_date DATE,
 	first_name VARCHAR,
@@ -27,25 +27,25 @@ CREATE TABLE employees(
 
 -- Create department manager table
 CREATE TABLE dept_manager(
-	dept_no VARCHAR,
-	emp_no INT
+	dept_no VARCHAR NOT NULL,
+	emp_no INT NOT NULL
 );
 
 -- Create department employees table
 CREATE TABLE dept_emp(
-	emp_no INT,
-	dept_no VARCHAR
+	emp_no INT NOT NULL,
+	dept_no VARCHAR NOT NULL
 );
 
 -- Create salaries table 
 CREATE TABLE salaries(
-	emp_no INT,
+	emp_no INT NOT NULL,
 	salary INT
 );
 
 -- Create titles table
 CREATE TABLE titles(
-	title_id VARCHAR PRIMARY KEY,
+	title_id VARCHAR PRIMARY KEY NOT NULL,
 	title VARCHAR
 );
 
