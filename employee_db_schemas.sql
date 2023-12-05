@@ -39,7 +39,7 @@ CREATE TABLE dept_emp(
 
 -- Create salaries table 
 CREATE TABLE salaries(
-	emp_no INT NOT NULL,
+	emp_no INT PRIMARY KEY NOT NULL,
 	salary INT
 );
 
